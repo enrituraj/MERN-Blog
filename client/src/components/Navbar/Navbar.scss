@@ -1,0 +1,38 @@
+
+.navbar{
+    display: flex;
+    max-width: 1440px;
+    background: #fff;
+    padding: 18px 45px;
+    border-bottom: 1px solid #eee;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+    .logo{
+        h2{
+            font-size: 20px;
+            font-weight: 500;
+            color: #374151;        
+        }
+    }
+    .menu{
+        display: flex;
+        gap: 35px;
+        .menu-item{
+            .menu-link{
+                font-size: 1rem;
+                line-height: 1.5rem;
+                color: #374151;
+                text-transform: capitalize;
+                &.btn{
+                    background-color: #273239;
+                    color: white;
+                    padding: 8px 27px;
+                    border-radius: 5px;
+                    font-size: 14px;
+                }
+            }
+        }
+
+    }
+}
