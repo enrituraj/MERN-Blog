@@ -36,3 +36,36 @@
 
     }
 }
+
+@media (max-width:768px){
+    .navbar{
+        padding: 18px;
+        .menu-group{
+            position: absolute;
+            inset: 61px 0 auto;
+            flex-direction: column;
+            background: #fff;
+            z-index: 1;
+            width: 100%;
+            height: 0px;
+            gap: 0;
+            visibility: hidden;
+            transition: height 2s linear;            
+            border-bottom: 1px solid #eeeeee;
+            box-shadow: 0px 2px 3px #00000045;
+            &.active{
+                height: auto;
+                visibility: visible;
+            }
+            .menu-item{
+                .menu-link{
+                    display: block;
+                    padding: 10px 20px;
+                }
+            }
+
+        
+        
+        }
+    }
+}

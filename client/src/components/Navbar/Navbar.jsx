@@ -9,7 +9,7 @@ const Navbar = () => {
         <div className="logo">
           <h2>MERN-Blog</h2>
         </div>
-        <ul className="menu">
+        <ul className="menu menu-group">
           { ['home','login','register','blog'].map((item)=>{
             return(
               <>
