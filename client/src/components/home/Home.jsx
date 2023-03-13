@@ -92,6 +92,36 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      <section className="our-blog">
+        <h3>Our Blog</h3>
+        <div className="flex">
+          <div className="col-8">
+            <div className="blog-card">
+              <div className="img-box">
+                <img src={img2} alt="gg" />
+              </div>
+              <div className="blog-content">
+                <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, officiis!</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis labore quia sequi quis. Ipsum veniam sint aspernatur ea, autem rerum accusamus eaque delectus repellat, molestiae dolorem amet! Laborum quis explicabo rem assumenda. Beatae quae delectus consectetur itaque ipsa obcaecati magni, quos asperiores deleniti dolorem odio exercitationem neque quidem adipisci saepe!</p>
+                <button>Read more</button>
+              </div>
+            </div>
+          </div>
+          <div className="col-4">
+            <div className="category-card">
+              <div className="category-item">Education</div>
+              <div className="category-item">Techincal</div>
+              <div className="category-item">Love</div>
+              <div className="category-item">port</div>
+              <div className="category-item">freelencing</div>
+              <div className="category-item">motivation</div>
+              <div className="category-item">tranding</div>
+              <div className="category-item">get ready</div>
+            </div>
+          </div>
+        </div>
+      </section>
     </>
   )
 }

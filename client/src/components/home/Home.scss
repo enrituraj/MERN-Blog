@@ -160,6 +160,41 @@
 
 }
 
+.our-blog{
+    padding: 18px 45px;
+    .flex{
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        .col-8{
+            flex: 2;
+            width: 60%;
+            .blog-card{
+                display: flex;
+                gap: 20px;
+            }
+        }
+        .col-4{
+            flex: 1;
+            width: 40%;
+            .category-card{
+                position: sticky;
+                top: 100px;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                padding: 30px;
+                background-color: #eeeeee;
+                .category-item{
+                    padding: 10px 20px;
+                    background-color: #fff;
+                    border: 2px solid #eeeeee;
+
+                }
+            }
+        }
+    }
+}
 @media (max-width:768px) {
     .header{
         padding: 18px;
