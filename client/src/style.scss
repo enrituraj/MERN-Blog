@@ -1,6 +1,6 @@
 $main-color:#fbfbfb;
 $bg-light:#fff;
-
+$dark-color:#3a3a3a;
 *{
     margin: 0;
     padding: 0;
@@ -8,7 +8,13 @@ $bg-light:#fff;
     font-family: 'Poppins', sans-serif;
 }
 body{
-    background-color: $main-color;
+    transition: all 1s ease-in-out;
+    &.Day{
+        background-color: $main-color;
+    }
+    &.Night{
+        background-color: $dark-color;
+    }
 }
 img{
     width: 100%;

@@ -1,18 +1,32 @@
 import React from 'react'
-import { useState } from 'react'
+import { useState,useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import './Navbar.scss'
 
 const Navbar = () => {
-  const [menu, setmenu] = useState(false)
+  const [menu, setmenu] = useState('')
   const [theme, settheme] = useState('Day')
 
   function togleMenu(){
-    menu ? setmenu(false) : setmenu(true)
+    (menu === 'active') ? setmenu('') : setmenu('active')
   }
   function changeTheme(themeName){
     (themeName === 'Day') ? settheme('Night') : settheme('Day')
   }
+
+  useEffect(() => {
+    document.body.classList = theme;
+  }, [theme])
+
+  useEffect(() => {
+    const m = document.getElementById('menu');
+    if(menu == 'active'){
+      m.classList.remove('active');
+    }else{
+      m.classList.add('active');
+    }
+  }, [menu])
+  
 
   return (
     <>
@@ -20,7 +34,7 @@ const Navbar = () => {
         <div className="logo">
           <h2>MERN-Blog</h2>
         </div>
-        <ul className= {`menu menu-group ${menu ? 'active' : ''}`}>
+        <ul id="menu" className="menu menu-group">
           { ['Home','Blog','contact','login'].map((item)=>{
             return(
               <>
@@ -55,7 +69,7 @@ const Navbar = () => {
             </Link>
           </li>
           <li className="menu-item sm-none">
-            <Link to="/regi" className="menu-link btn sm-hidden">Sign Up</Link>
+            <Link to="/register" className="menu-link btn sm-hidden">Sign Up</Link>
           </li>
         </ul>
       </div>
