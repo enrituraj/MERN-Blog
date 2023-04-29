@@ -20,10 +20,10 @@ const Navbar = () => {
 
   useEffect(() => {
     const m = document.getElementById('menu');
-    if(menu == 'active'){
-      m.classList.remove('active');
-    }else{
+    if(menu === 'active'){
       m.classList.add('active');
+    }else{
+      m.classList.remove('active');
     }
   }, [menu])
   
@@ -46,7 +46,7 @@ const Navbar = () => {
             })
           }
           <li class="menu-item lg-hidden">
-            <Link class="menu-link" to="/blog">Register</Link>
+            <Link class="menu-link" to="/register">Register</Link>
           </li>
         </ul>
         <ul className="menu">
